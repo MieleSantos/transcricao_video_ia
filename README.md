@@ -22,6 +22,7 @@ Este projeto foi implementado com as seguintes tecnologias e ferramentas:
   - **langchain_openai**
   - **langchain_groq**
 - **[Poetry](https://python-poetry.org/)**: Gerenciador de dependências e empacotamento para Python.
+- **Django**
 
 ## Como Funciona
 
@@ -57,20 +58,9 @@ Este projeto foi implementado com as seguintes tecnologias e ferramentas:
 
 4. Execute a aplicação localmente com Streamlit:
    ```bash
-   python app/main.py
+   python manage.py runserver
    ```
 
-## Estrutura do Projeto
+# Demonstração do Projeto
 
-```plaintext
-📦 transcricao_video_ia
-├── 📁 app
-│   ├── 📄 main.py         # Lógica principal da aplicação
-├── 📄 pyproject.toml        # Arquivo de configuração do Poetry
-├── 📄 README.md             # Documentação do projeto
-```
-
-## Futuras Melhorias
-
-- Melhorar a interface de usuário.
-
+![Demonstração do Projeto](ia.gif)

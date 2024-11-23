@@ -122,7 +122,7 @@ class AssistentTranscricao:
         )
 
         infos = video_loader.load()[0]
-        # print("aqui", infos)
+
         metadata = infos.metadata
         transcript = infos.page_content
 
@@ -134,19 +134,18 @@ class AssistentTranscricao:
 
             chain = self.llm_chain()
 
-            res = chain.invoke({'transcricao': transcript, 'consulta': query})
-            print(res)
-            # return res
+            return chain.invoke({'transcricao': transcript, 'consulta': query})
+
         except Exception as e:
             print('Erro ao carregar transcrição')
             print(e)
 
 
 # url_video = "https://www.youtube.com/watch?v=3LHSyha0xN0"
-url_video = input('Informe a url do video: ')
-query_user = 'sumarize de forma clara de entender'
-model_class = 'groq'
-language = ['pt', 'pt-BR', 'en']
+# url_video = input('Informe a url do video: ')
+# query_user = 'sumarize de forma clara de entender'
+# model_class = 'groq'
+# language = ['pt', 'pt-BR', 'en']
 
-assitent = AssistentTranscricao(model_class=model_class)
-assitent.interpret_video(url_video, query_user, language)
+# assitent = AssistentTranscricao(model_class=model_class)
+# assitent.interpret_video(url_video, query_user, language)
